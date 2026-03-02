@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+
+  dispatcher:
+    build: ./dispatcher
+    ports:
+      - "8000:8000"
+
+  auth-service:
+    build: ./auth-service
+
+  user-service:
+    build: ./user-service
+
+  order-service:
+    build: ./order-service
+
+  message-service:
+    build: ./message-service
