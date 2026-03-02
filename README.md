@@ -34,7 +34,7 @@ Sistem aşağıdaki bileşenlerden oluşmaktadır:
 
 ## 3. Sistem Mimarisi Diyagramı
 
-```mermaid
+
 graph TD
     Client --> Dispatcher
     Dispatcher --> AuthService
@@ -63,7 +63,7 @@ Mikroservisler dış dünyaya kapalı olup yalnızca iç ağ üzerinden erişile
 
 Aşağıda sistemin genel mimari yapısı gösterilmektedir.
 
-> 📌 BURAYA SİSTEM MİMARİSİ GÖRSELİ EKLENECEK
+
 
 ```mermaid
 graph TD
@@ -88,7 +88,6 @@ Kullanıcı sisteme giriş yapmak istediğinde aşağıdaki adımlar gerçekleş
 4. Doğrulama başarılı ise JWT token üretir.
 5. Dispatcher token’ı kullanıcıya iletir.
 
-> 📌 BURAYA LOGIN AKIŞ GÖRSELİ EKLENECEK
 
 ```mermaid
 sequenceDiagram
@@ -182,7 +181,6 @@ Her mikroservis kendi veri tabanına sahiptir ve veri izolasyonu sağlanmaktadı
 
 Bu izolasyon sayesinde servisler arası doğrudan veri erişimi engellenmektedir.
 
-> 📌 BURAYA VERİ TABANI MİMARİ GÖRSELİ EKLENECEK
 
 ---
 
@@ -216,7 +214,6 @@ Tüm sistem Dockerize edilmiştir.
 
 tek seferde ayağa kalkacaktır.
 
-> 📌 BURAYA DOCKER CONTAINER EKRAN GÖRÜNTÜSÜ EKLENECEK
 
 ---
 
@@ -237,7 +234,6 @@ Sistem **Locust** aracı kullanılarak yoğun trafik altında test edilecektir.
 - Hata oranı
 - Dispatcher yönlendirme başarısı
 
-> 📌 BURAYA YÜK TESTİ SONUÇ GRAFİĞİ EKLENECEK
 
 ---
 
