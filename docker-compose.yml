@@ -6,15 +6,59 @@ services:
     build: ./dispatcher
     ports:
       - "8000:8000"
+    depends_on:
+      - auth-service
+      - user-service
+      - order-service
+      - message-service
+      - dispatcher-db
 
   auth-service:
     build: ./auth-service
+    depends_on:
+      - auth-db
 
   user-service:
     build: ./user-service
+    depends_on:
+      - user-db
 
   order-service:
     build: ./order-service
+    depends_on:
+      - order-db
 
   message-service:
     build: ./message-service
+    depends_on:
+      - message-db
+
+  dispatcher-db:
+    image: mongo
+    container_name: dispatcher-db
+    ports:
+      - "27018:27017"
+
+  auth-db:
+    image: mongo
+    container_name: auth-db
+    ports:
+      - "27019:27017"
+
+  user-db:
+    image: mongo
+    container_name: user-db
+    ports:
+      - "27020:27017"
+
+  order-db:
+    image: mongo
+    container_name: order-db
+    ports:
+      - "27021:27017"
+
+  message-db:
+    image: mongo
+    container_name: message-db
+    ports:
+      - "27022:27017"
