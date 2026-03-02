@@ -37,10 +37,9 @@ Sistem aşağıdaki bileşenlerden oluşmaktadır:
 ## 3. Sistem Mimarisi Diyagramı
 
 
-<<<<<<< HEAD
-=======
+
 ```mermaid
->>>>>>> dfbd0a7 (Improved architecture: added isolated MongoDBs, dispatcher skeleton and advanced documentation)
+
 graph TD
     Client --> Dispatcher
     Dispatcher --> AuthService
